@@ -1,0 +1,69 @@
+{
+  "name": "webstorm-test-app",
+  "version": "5.109.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open --config config/webpack.local.js",
+    "dev": "webpack serve --open --config config/webpack.dev.local.js",
+    "build": "webpack build --config config/webpack.prod.js",
+    "watch": "webpack --watch",
+    "build:staging": "webpack build --config config/webpack.staging.js",
+    "build:dev": "webpack build --config config/webpack.dev.js",
+    "build:prod": "webpack build --config config/webpack.prod.js",
+    "analyze": "yarn run build --devtool source-map && source-map-explorer 'config/dist/*.js' --only-mapped",
+    "clean": "rm -rf dist",
+    "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0",
+    "lint:fix": "eslint \"./src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0 --fix",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx}\" --config ./.prettierrc",
+    "ts": "tsc --noEmit --incremental"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.58.0",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "fork-ts-checker-webpack-plugin": "^7.2.12",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.8.2",
+    "sass": "^1.57.1",
+    "sass-loader": "^12.4.0",
+    "source-map-explorer": "^2.5.3",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-typescript-sort-keys": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack-merge": "^5.8.0"
+  }
+}

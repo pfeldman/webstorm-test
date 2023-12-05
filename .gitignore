@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+
+# compiled output
+dist
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+npm-debug.log
+yarn-error.log
+
+# System Files
+.DS_Store
+Thumbs.db
+.idea
+
+# test
+coverage
+
+# general
+/amplify
+
+#jsconfig
+jsconfig.json
